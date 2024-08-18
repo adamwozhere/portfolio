@@ -1,0 +1,30 @@
+.intro h1 {
+  margin-top: var(--space-2xl-3xl);
+}
+
+.intro a {
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.1em;
+  transition: text-underline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intro a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.intro .socials {
+  margin-top: var(--space-xl);
+}
+
+.intro .socials a {
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intro .socials a:hover[data-color='moss'] {
+  color: var(--moss);
+}
+
+.intro .socials a:hover[data-color='firecracker'] {
+  color: var(--firecracker);
+}

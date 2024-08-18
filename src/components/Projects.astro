@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = await getCollection('projects');
+projects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="projects" class=" region flow py-24">
+  <h2 class="display font-bold text-[52px] my-10 leading-tight">I'm always learning. Take a look at my latest <span class="text-firecracker">projects</span></h2>
+  <!-- <ul class="flex flex-col gap-8"> -->
+  <ul class="grid grid-cols-2 gap-4 mt-20" role="list">
+    {projects.map((project) => (
+      <ProjectCard project={project} />
+    ))}
+  </ul>
+</section>

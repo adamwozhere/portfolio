@@ -1,0 +1,39 @@
+.text-moss {
+  color: var(--moss);
+}
+
+.text-firecracker {
+  color: var(--firecracker);
+}
+
+.text-smoke {
+  color: var(--smoke);
+}
+
+.text-slate {
+  color: var(--slate);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-s {
+  font-size: var(--step--1);
+}
+
+.text-xs {
+  font-size: var(--step--2);
+}
+
+.text-l {
+  font-size: var(--step-1);
+}
+
+.text-xl {
+  font-size: var(--step-2);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

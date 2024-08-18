@@ -1,0 +1,8 @@
+.site-foot {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: var(--space-m);
+  margin-top: var(--space-3xl);
+  font-size: var(--step--1);
+}

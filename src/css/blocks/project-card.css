@@ -1,0 +1,89 @@
+.project-card {
+  /* isolation: isolate; */
+  will-change: transform;
+  position: relative;
+  height: 100%;
+  background-color: var(--firecracker);
+  transition: all 150ms ease;
+
+  & a::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+  }
+
+  & a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0;
+    transition: text-decoration-color 150ms ease,
+      text-underline-offset 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--slate);
+  }
+
+  & a:hover {
+    text-decoration-color: var(--slate);
+    text-underline-offset: 4px;
+  }
+
+  & a:hover::after {
+    height: calc(100% + 8px);
+  }
+
+  & p {
+    color: var(--slate);
+  }
+}
+
+.project-card .inner:has(a:hover) {
+  transform: translateY(-8px);
+}
+
+.project-card:has(h3 a:hover) svg #arrow {
+  /* transform: translateX(16px); */
+  animation: arrow 150ms ease-in-out;
+}
+
+.project-card .inner {
+  height: 100%;
+  background-color: var(--pale-firecracker);
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card > .inner svg {
+  margin-top: auto;
+}
+
+/* fix hovering over space that is inside the ul block, but outside of content, causing hover to break */
+.project-card ul {
+  pointer-events: none;
+  align-items: center;
+}
+
+.project-card p {
+  max-width: 50ch;
+}
+
+.project-card .tags {
+  color: var(--firecracker);
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(28px);
+  }
+  51% {
+    transform: translateX(-28px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
