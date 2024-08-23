@@ -1,29 +1,30 @@
 ---
-import '../css/styles'
+import '../css/styles';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/Footer.astro';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
-const description = 'Hi I\'m Adam Wozniak. A web developer with a background in motion graphics. Check out my projects and say hello.'
+const description =
+  "Hi I'm Adam Wozniak. A web developer with a background in motion graphics. Check out my projects and say hello.";
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body>
-		<slot />
-		<Footer transition:persist />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content={description} />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+    <Footer transition:persist />
+  </body>
 </html>
