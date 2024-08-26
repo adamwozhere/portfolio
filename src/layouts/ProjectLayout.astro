@@ -13,39 +13,40 @@ const { data } = Astro.props;
 
 <BaseLayout title={`Adam Wozniak | ${data.title}`}>
   <main>
-    <div class='project-back-bar'>
-      <div class='wrapper'>
-        <a href='/#projects'>
+    <div class="project-back-bar">
+      <div class="wrapper">
+        <a href="/#projects">
           <ArrowLeft size={24} />
           <span>Back to projects</span>
         </a>
       </div>
     </div>
-    <article class='project'>
-      <header class='bg-pale-moss'>
-        <div class='wrapper flow'>
+    <article class="project">
+      <header class="bg-pale-moss">
+        <div class="wrapper flow">
           <h1>{data.title}</h1>
-          <div class='project__info'>
+          <div class="project__info">
             <div>
-              <div class='info__title'>Project Type</div>
-              <div class='text-s font-bold text-moss'>{data.type}</div>
+              <div class="info__title">Project Type</div>
+              <div class="text-s font-bold text-moss">{data.type}</div>
             </div>
             <div>
-              <div class='info__title'>Tech Stack</div>
-              <ul class='cluster tags text-moss' role='list'>
+              <div class="info__title">Tech Stack</div>
+              <ul class="cluster tags text-moss" role="list">
                 {data.tags.map((tag) => <li>{tag}</li>)}
               </ul>
             </div>
           </div>
-          <ul class='font-bold text-l flow info__links' role='list'>
+          <ul class="font-bold text-l flow info__links" role="list">
             <li>
-              <a href={data.website} target='_blank' rel='noreferrer'
-                >Visit the website<LinkIcon size={14} /></a>
+              <a href={data.website} target="_blank" rel="noreferrer"
+                >Visit the website<LinkIcon size={14} /></a
+              >
             </li>
             {
               data.github && (
                 <li>
-                  <a href={data.github} target='_blank' rel='noreferrer'>
+                  <a href={data.github} target="_blank" rel="noreferrer">
                     View the code
                     <LinkIcon size={14} />
                   </a>
@@ -55,11 +56,11 @@ const { data } = Astro.props;
           </ul>
         </div>
       </header>
-      <div class='project__content wrapper flow'>
+      <div class="project__content wrapper flow">
         <slot />
       </div>
-      <footer class='wrapper project__footer'>
-        <div aria-hidden='true'>***</div>
+      <footer class="wrapper project__footer">
+        <div aria-hidden="true">***</div>
       </footer>
     </article>
   </main>

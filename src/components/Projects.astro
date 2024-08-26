@@ -6,12 +6,12 @@ const projects = await getCollection('projects');
 projects.sort((a, b) => a.data.order - b.data.order);
 ---
 
-<section id='projects' class='region flow'>
-  <h2 class='display'>
+<section id="projects" class="region flow">
+  <h2 class="display">
     I'm always learning. Take a look at my latest
-    <span class='text-firecracker'>projects</span>
+    <span class="text-firecracker">projects</span>
   </h2>
-  <ul class='grid' role='list'>
+  <ul class="grid" role="list">
     {projects.map((project) => <ProjectCard project={project} />)}
   </ul>
 </section>
