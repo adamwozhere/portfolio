@@ -3,7 +3,7 @@
   --wrapper-width: 54rem;
   --gutter: 1rem;
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Inter', 'Inter_fallback', sans-serif;
 
   --firecracker: #d86745;
   --pale-firecracker: #ffebe4;
